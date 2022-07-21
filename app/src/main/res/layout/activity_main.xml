@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner">
+    </com.google.android.gms.ads.AdView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/jackpot"
+        android:layout_marginBottom="@dimen/margin_bottom_pics">
+
+        <TextView
+            android:id="@+id/jackpot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp"
+            android:text="250,565"
+            android:textStyle="bold"
+            android:textColor="#441901"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/spinner_shape">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spinner1"
+                android:layout_marginTop="10dp"
+                android:layout_width="85dp"
+                android:layout_height="260dp"
+                android:background="@drawable/spinner"
+                android:scrollbars="none"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spinner2"
+                android:layout_width="85dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/spinner"
+                android:scrollbars="none"
+                 />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spinner3"
+                android:layout_width="85dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spinner"
+                android:scrollbars="none"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@+id/bar_bottom">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:background="@drawable/balance_bg">
+
+            <TextView
+                android:id="@+id/myCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0575"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bar_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <include
+        layout="@layout/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

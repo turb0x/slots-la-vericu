@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#66000000">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+       android:layout_above="@+id/sett"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/close"/>
+
+    <RelativeLayout
+        android:id="@+id/sett"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/settin">
+
+
+
+        <ImageView
+            android:id="@+id/music_on"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="57dp"
+            android:background="@drawable/on"/>
+
+        <ImageView
+            android:id="@+id/music_off"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="57dp"
+            android:background="@drawable/off"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/sounds_on"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="93dp"
+            android:background="@drawable/on"/>
+
+        <ImageView
+            android:id="@+id/sounds_off"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="93dp"
+            android:background="@drawable/off"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+</RelativeLayout>
